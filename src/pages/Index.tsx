@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Download, Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowRight, Download, Mail, Github, Linkedin, Code, Database, Globe, Server, Cpu, GitBranch, Cloud, Brain, Users, MessageSquare, PenTool, Target, Briefcase, FileText, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -14,17 +14,17 @@ const Index = () => {
   }, []);
 
   const skills = [
-    { name: 'Python', level: 'Proficient', icon: '🐍' },
-    { name: 'Java', level: 'Proficient', icon: '☕' },
-    { name: 'JavaScript', level: 'Proficient', icon: '🟨' },
-    { name: 'React', level: 'Intermediate', icon: '⚛️' },
-    { name: 'Spring Boot', level: 'Intermediate', icon: '🍃' },
-    { name: 'Node.js', level: 'Intermediate', icon: '🟢' },
-    { name: 'MongoDB', level: 'Beginner', icon: '🍃' },
-    { name: 'MySQL', level: 'Beginner', icon: '🐬' },
-    { name: 'Firebase', level: 'Beginner', icon: '🔥' },
-    { name: 'Git', level: 'Beginner', icon: '📝' },
-    { name: 'Salesforce', level: 'Beginner', icon: '☁️' }
+    { name: 'Python', level: 'Proficient', icon: Code },
+    { name: 'Java', level: 'Proficient', icon: Cpu },
+    { name: 'JavaScript', level: 'Proficient', icon: Globe },
+    { name: 'React', level: 'Intermediate', icon: Code },
+    { name: 'Spring Boot', level: 'Intermediate', icon: Server },
+    { name: 'Node.js', level: 'Intermediate', icon: Server },
+    { name: 'MongoDB', level: 'Beginner', icon: Database },
+    { name: 'MySQL', level: 'Beginner', icon: Database },
+    { name: 'Firebase', level: 'Beginner', icon: Cloud },
+    { name: 'Git', level: 'Beginner', icon: GitBranch },
+    { name: 'Salesforce', level: 'Beginner', icon: Cloud }
   ];
 
   const projects = [
@@ -63,7 +63,25 @@ const Index = () => {
       location: 'Hyderabad',
       duration: '2024',
       description: 'Worked in startup mentorship environment. Gained hands-on startup development experience.'
+    },
+    {
+      title: 'Freelancer',
+      company: 'Independent Projects',
+      location: 'Remote',
+      duration: '2023–Present',
+      description: 'Developing custom web applications and providing technical consulting services to various clients across different industries.'
     }
+  ];
+
+  const areaOfExpertise = [
+    { name: 'Communication & Collaboration', icon: MessageSquare },
+    { name: 'Prompt Engineering', icon: Brain },
+    { name: 'Entrepreneurial Skills', icon: Target },
+    { name: 'Problem-Solving and Critical Thinking', icon: PenTool },
+    { name: 'Team Collaboration', icon: Users },
+    { name: 'Project Management', icon: Briefcase },
+    { name: 'Technical Writing', icon: FileText },
+    { name: 'Leetcode DSA', icon: Trophy }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -240,7 +258,7 @@ const Index = () => {
                   className="flex-shrink-0 group relative cursor-pointer"
                 >
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-2xl hover:bg-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-white/30 hover:scale-110 group-hover:ring-2 group-hover:ring-white/30">
-                    {skill.icon}
+                    <skill.icon className="w-8 h-8 text-white" />
                   </div>
                   
                   {/* Tooltip */}
@@ -252,6 +270,30 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Area of Expertise Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Area of Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {areaOfExpertise.map((expertise, index) => (
+              <div
+                key={index}
+                className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300 group hover:shadow-lg hover:shadow-white/10 hover:scale-105"
+              >
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                    <expertise.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-medium text-white leading-tight">
+                    {expertise.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
