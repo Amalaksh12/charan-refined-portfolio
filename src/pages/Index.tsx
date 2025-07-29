@@ -258,7 +258,7 @@ const Index = () => {
                   className="flex-shrink-0 group relative cursor-pointer"
                 >
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-2xl hover:bg-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-white/30 hover:scale-110 group-hover:ring-2 group-hover:ring-white/30">
-                    <skill.icon className="w-8 h-8 text-white" />
+                    {React.createElement(skill.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   
                   {/* Tooltip */}
@@ -286,7 +286,7 @@ const Index = () => {
               >
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
-                    <expertise.icon className="w-8 h-8 text-white" />
+                    {React.createElement(expertise.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-lg font-medium text-white leading-tight">
                     {expertise.name}
