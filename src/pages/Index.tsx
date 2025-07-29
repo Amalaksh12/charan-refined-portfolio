@@ -14,17 +14,86 @@ const Index = () => {
   }, []);
 
   const skills = [
-    { name: 'Python', level: 'Proficient', icon: Code },
-    { name: 'Java', level: 'Proficient', icon: Cpu },
-    { name: 'JavaScript', level: 'Proficient', icon: Globe },
-    { name: 'React', level: 'Intermediate', icon: Code },
-    { name: 'Spring Boot', level: 'Intermediate', icon: Server },
-    { name: 'Node.js', level: 'Intermediate', icon: Server },
-    { name: 'MongoDB', level: 'Beginner', icon: Database },
-    { name: 'MySQL', level: 'Beginner', icon: Database },
-    { name: 'Firebase', level: 'Beginner', icon: Cloud },
-    { name: 'Git', level: 'Beginner', icon: GitBranch },
-    { name: 'Salesforce', level: 'Beginner', icon: Cloud }
+    { 
+      name: 'Python', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+    },
+    { 
+      name: 'Java', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
+    },
+    { 
+      name: 'JavaScript', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+    },
+    { 
+      name: 'TypeScript', 
+      level: 'Intermediate', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+    },
+    { 
+      name: 'React', 
+      level: 'Intermediate', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+    },
+    { 
+      name: 'Spring Boot', 
+      level: 'Intermediate', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'
+    },
+    { 
+      name: 'Node.js', 
+      level: 'Intermediate', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+    },
+    { 
+      name: 'MongoDB', 
+      level: 'Beginner', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+    },
+    { 
+      name: 'MySQL', 
+      level: 'Beginner', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+    },
+    { 
+      name: 'Firebase', 
+      level: 'Beginner', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg'
+    },
+    { 
+      name: 'Git', 
+      level: 'Beginner', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+    },
+    { 
+      name: 'Docker', 
+      level: 'Beginner', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg'
+    },
+    { 
+      name: 'HTML5', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+    },
+    { 
+      name: 'CSS3', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+    },
+    { 
+      name: 'GitHub', 
+      level: 'Intermediate', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
+    },
+    { 
+      name: 'VS Code', 
+      level: 'Proficient', 
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'
+    }
   ];
 
   const projects = [
@@ -257,8 +326,12 @@ const Index = () => {
                   key={index}
                   className="flex-shrink-0 group relative cursor-pointer"
                 >
-                  <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-2xl hover:bg-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-white/30 hover:scale-110 group-hover:ring-2 group-hover:ring-white/30">
-                    {React.createElement(skill.icon, { className: "w-8 h-8 text-white" })}
+                  <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-white/30 hover:scale-110 group-hover:ring-2 group-hover:ring-white/30">
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name}
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
                   
                   {/* Tooltip */}
