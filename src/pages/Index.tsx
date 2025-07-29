@@ -100,15 +100,17 @@ const Index = () => {
   const projects = [
     {
       title: 'Certification at Doorstep',
-      description: 'Seamless citizen services for government certifications with end-to-end digitization.',
+      description: 'Seamless citizen services for government certifications with end-to-end digitization. Built a comprehensive platform that digitizes the entire process of applying for and receiving government certificates, reducing processing time by 70% and improving citizen satisfaction.',
       tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop'
+      githubLink: 'https://github.com/saicharan5789/certification-doorstep',
+      features: ['Digital document submission', 'Real-time status tracking', 'Automated verification system', 'Mobile-first responsive design']
     },
     {
       title: 'WebLock Intrusion Detection',
-      description: 'Real-time intrusion detection system with advanced log analysis and threat monitoring.',
+      description: 'Real-time intrusion detection system with advanced log analysis and threat monitoring. Implemented machine learning algorithms to detect anomalous behavior patterns and potential security threats with 95% accuracy.',
       tech: ['Python', 'Flask', 'SQLite', 'Machine Learning'],
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop'
+      githubLink: 'https://github.com/saicharan5789/weblock-ids',
+      features: ['Real-time threat detection', 'ML-based anomaly detection', 'Automated alert system', 'Comprehensive logging dashboard']
     }
   ];
 
@@ -145,44 +147,58 @@ const Index = () => {
 
   const areaOfExpertise = [
     { 
+      name: 'AI Integration & Deployment', 
+      icon: Brain,
+      description: 'Experienced in embedding AI into real-world workflows. Integrated NLP, vision, and predictive models into scalable applications using APIs and custom ML pipelines.',
+      technologies: ['OpenAI', 'LangChain', 'TensorFlow', 'Hugging Face', 'NLP', 'Model Deployment']
+    },
+    { 
       name: 'Communication & Collaboration', 
       icon: MessageSquare,
-      description: 'Experienced in cross-functional team communication, stakeholder management, and collaborative problem-solving across diverse technical and non-technical teams.'
+      description: 'Experienced in cross-functional team communication, stakeholder management, and collaborative problem-solving across diverse technical and non-technical teams.',
+      technologies: ['Team Leadership', 'Agile Methodologies', 'Stakeholder Management', 'Technical Communication']
     },
     { 
       name: 'Prompt Engineering', 
       icon: Brain,
-      description: 'Skilled in crafting effective prompts for AI systems, optimizing LLM interactions, and implementing AI-driven solutions for various business use cases.'
+      description: 'Skilled in crafting effective prompts for AI systems, optimizing LLM interactions, and implementing AI-driven solutions for various business use cases.',
+      technologies: ['GPT Models', 'Prompt Optimization', 'AI Integration', 'LLM Fine-tuning']
     },
     { 
       name: 'Entrepreneurial Skills', 
       icon: Target,
-      description: 'Strong business acumen with experience in startup environments, product development, market analysis, and strategic planning for tech ventures.'
+      description: 'Strong business acumen with experience in startup environments, product development, market analysis, and strategic planning for tech ventures.',
+      technologies: ['Market Analysis', 'Product Strategy', 'Business Development', 'Startup Mentorship']
     },
     { 
       name: 'Problem-Solving and Critical Thinking', 
       icon: PenTool,
-      description: 'Analytical approach to complex technical challenges, systematic debugging, and innovative solution design for scalable software systems.'
+      description: 'Analytical approach to complex technical challenges, systematic debugging, and innovative solution design for scalable software systems.',
+      technologies: ['System Design', 'Debugging', 'Algorithm Optimization', 'Performance Tuning']
     },
     { 
       name: 'Team Collaboration', 
       icon: Users,
-      description: 'Proven track record in agile development environments, code reviews, knowledge sharing, and mentoring junior developers.'
+      description: 'Proven track record in agile development environments, code reviews, knowledge sharing, and mentoring junior developers.',
+      technologies: ['Agile/Scrum', 'Code Reviews', 'Mentoring', 'Cross-functional Teams']
     },
     { 
       name: 'Project Management', 
       icon: Briefcase,
-      description: 'Experience with project lifecycle management, sprint planning, resource allocation, and delivery of technical projects on time and within scope.'
+      description: 'Experience with project lifecycle management, sprint planning, resource allocation, and delivery of technical projects on time and within scope.',
+      technologies: ['Jira', 'Confluence', 'Sprint Planning', 'Resource Management']
     },
     { 
       name: 'Technical Writing', 
       icon: FileText,
-      description: 'Proficient in creating comprehensive documentation, API guides, user manuals, and technical specifications for complex software systems.'
+      description: 'Proficient in creating comprehensive documentation, API guides, user manuals, and technical specifications for complex software systems.',
+      technologies: ['API Documentation', 'Technical Specs', 'User Guides', 'Process Documentation']
     },
     { 
       name: 'Leetcode DSA', 
       icon: Trophy,
-      description: 'Strong foundation in data structures and algorithms with consistent practice on competitive programming platforms and technical interview preparation.'
+      description: 'Strong foundation in data structures and algorithms with consistent practice on competitive programming platforms and technical interview preparation.',
+      technologies: ['Data Structures', 'Algorithms', 'Competitive Programming', 'Technical Interviews']
     }
   ];
 
@@ -219,28 +235,32 @@ const Index = () => {
       issuer: 'Coursera',
       date: '2023',
       description: 'Comprehensive certification covering React, Node.js, and database management',
-      icon: Code
+      icon: Code,
+      link: 'https://drive.google.com/file/d/your-certificate-id/view'
     },
     {
       title: 'Python for Data Science',
       issuer: 'edX',
       date: '2023',
       description: 'Advanced Python programming with focus on data analysis and machine learning',
-      icon: Brain
+      icon: Brain,
+      link: 'https://drive.google.com/file/d/your-certificate-id/view'
     },
     {
       title: 'Cloud Computing Fundamentals',
       issuer: 'AWS',
       date: '2024',
       description: 'Foundation level certification in cloud services and architecture',
-      icon: Cloud
+      icon: Cloud,
+      link: 'https://drive.google.com/file/d/your-certificate-id/view'
     },
     {
       title: 'Agile Project Management',
       issuer: 'PMI',
       date: '2024',
       description: 'Certified in agile methodologies and project management best practices',
-      icon: Briefcase
+      icon: Briefcase,
+      link: 'https://drive.google.com/file/d/your-certificate-id/view'
     }
   ];
 
@@ -256,13 +276,14 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold">Y. Sai Charan Gupta</div>
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Projects', 'Experience', 'Skills', 'Education', 'Contact'].map((item) => (
+              {['Home', 'About', 'Projects', 'Experience', 'Skills', 'Achievements', 'Certifications', 'Education', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
+                  className="text-gray-300 hover:text-orange-400 transition-colors duration-200 cursor-pointer relative group"
                 >
                   {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
             </div>
@@ -353,29 +374,82 @@ const Index = () => {
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">What I've Built</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800 hover:bg-gray-900/70 transition-all duration-300 group hover:shadow-2xl hover:shadow-white/10 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="aspect-video mb-6 rounded-lg overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-3 text-white">{project.title}</h3>
-                  <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 transition-colors duration-200"
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <Card className="bg-gray-900/50 border-gray-800 hover:bg-gray-900/70 transition-all duration-300 group hover:shadow-2xl hover:shadow-white/10 hover:scale-105 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-all duration-300 flex-shrink-0">
+                          <Code className="w-8 h-8 text-orange-400" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-semibold mb-3 text-white">{project.title}</h3>
+                          <p className="text-gray-400 mb-4 leading-relaxed line-clamp-3">{project.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.tech.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex}
+                                className="px-3 py-1 bg-orange-500/20 rounded-full text-sm text-orange-300 border border-orange-500/30"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-2xl">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-semibold text-orange-400 flex items-center gap-3">
+                      <Code className="w-6 h-6" />
+                      {project.title}
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-6">
+                    <p className="text-gray-300 leading-relaxed text-lg">
+                      {project.description}
+                    </p>
+                    
+                    <div>
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {project.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="text-gray-300 flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Technologies & Skills:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-3 py-1.5 bg-orange-500/20 rounded-lg text-sm text-orange-300 border border-orange-500/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-4">
+                      <Button
+                        onClick={() => window.open(project.githubLink, '_blank')}
+                        className="bg-orange-500/20 hover:bg-orange-500/30 text-orange-400 border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <Github className="mr-2 h-4 w-4" />
+                        View on GitHub
+                      </Button>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
@@ -425,12 +499,12 @@ const Index = () => {
                     />
                   </div>
                   
-                  {/* Tooltip */}
-                  <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-3 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-[100] shadow-xl">
-                    <div className="font-semibold text-center">{skill.name}</div>
-                    <div className="text-xs text-gray-600 text-center">{skill.level}</div>
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
-                  </div>
+                   {/* Tooltip */}
+                   <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 bg-gray-900 border border-gray-700 text-white px-4 py-3 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-[200] shadow-2xl">
+                     <div className="font-semibold text-center">{skill.name}</div>
+                     <div className="text-xs text-gray-400 text-center">{skill.level}</div>
+                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                   </div>
                 </div>
               ))}
             </div>
@@ -439,7 +513,7 @@ const Index = () => {
       </section>
 
       {/* Area of Expertise Section */}
-      <section className="py-32 px-6">
+      <section id="expertise" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Area of Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -448,8 +522,8 @@ const Index = () => {
                 <DialogTrigger asChild>
                   <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300 group hover:shadow-lg hover:shadow-white/10 hover:scale-105 cursor-pointer">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
-                        {React.createElement(expertise.icon, { className: "w-8 h-8 text-white" })}
+                      <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-all duration-300">
+                        {React.createElement(expertise.icon, { className: "w-8 h-8 text-orange-400" })}
                       </div>
                       <h3 className="text-lg font-medium text-white leading-tight">
                         {expertise.name}
@@ -457,16 +531,32 @@ const Index = () => {
                     </div>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-md">
+                <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-lg">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold text-white flex items-center gap-3">
-                      {React.createElement(expertise.icon, { className: "w-6 h-6 text-white" })}
+                    <DialogTitle className="text-xl font-semibold text-orange-400 flex items-center gap-3">
+                      {React.createElement(expertise.icon, { className: "w-6 h-6 text-orange-400" })}
                       {expertise.name}
                     </DialogTitle>
                   </DialogHeader>
-                  <p className="text-gray-300 leading-relaxed">
-                    {expertise.description}
-                  </p>
+                  <div className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      {expertise.description}
+                    </p>
+                    
+                    <div className="border-t border-gray-700 pt-4">
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Key Technologies & Skills:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {expertise.technologies.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-3 py-1 bg-orange-500/20 rounded-lg text-sm text-orange-300 border border-orange-500/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </DialogContent>
               </Dialog>
             ))}
@@ -475,7 +565,7 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-32 px-6 bg-gray-950/30">
+      <section id="achievements" className="py-32 px-6 bg-gray-950/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -485,13 +575,13 @@ const Index = () => {
                   <Card className="bg-gray-900/50 border-gray-800 hover:bg-gray-900/70 transition-all duration-300 group hover:shadow-2xl hover:shadow-white/10 hover:scale-105 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 flex-shrink-0">
-                          {React.createElement(achievement.icon, { className: "w-6 h-6 text-white" })}
+                        <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-all duration-300 flex-shrink-0">
+                          {React.createElement(achievement.icon, { className: "w-6 h-6 text-orange-400" })}
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold mb-2 text-white">{achievement.title}</h3>
                           <p className="text-gray-400 mb-2">{achievement.description}</p>
-                          <p className="text-sm text-gray-500">{achievement.date}</p>
+                          <p className="text-sm text-orange-400">{achievement.date}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -499,8 +589,8 @@ const Index = () => {
                 </DialogTrigger>
                 <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-md">
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold text-white flex items-center gap-3">
-                      {React.createElement(achievement.icon, { className: "w-6 h-6 text-white" })}
+                    <DialogTitle className="text-xl font-semibold text-orange-400 flex items-center gap-3">
+                      {React.createElement(achievement.icon, { className: "w-6 h-6 text-orange-400" })}
                       {achievement.title}
                     </DialogTitle>
                   </DialogHeader>
@@ -522,50 +612,30 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-32 px-6">
+      <section id="certifications" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((certification, index) => (
-              <Dialog key={index}>
-                <DialogTrigger asChild>
-                  <Card className="bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group hover:shadow-lg hover:shadow-white/10 hover:scale-105 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 flex-shrink-0">
-                          {React.createElement(certification.icon, { className: "w-6 h-6 text-white" })}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold mb-2 text-white">{certification.title}</h3>
-                          <p className="text-gray-400 mb-1">{certification.issuer}</p>
-                          <p className="text-sm text-gray-500">{certification.date}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </DialogTrigger>
-                <DialogContent className="bg-gray-900 border-gray-700 text-white max-w-md">
-                  <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold text-white flex items-center gap-3">
-                      {React.createElement(certification.icon, { className: "w-6 h-6 text-white" })}
-                      {certification.title}
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="space-y-4">
-                    <p className="text-gray-300 leading-relaxed">
-                      {certification.description}
-                    </p>
-                    <div className="border-t border-gray-700 pt-4 space-y-2">
-                      <p className="text-sm text-gray-400">
-                        <strong>Issuer:</strong> {certification.issuer}
-                      </p>
-                      <p className="text-sm text-gray-400">
-                        <strong>Date:</strong> {certification.date}
-                      </p>
+              <Card 
+                key={index}
+                className="bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group hover:shadow-lg hover:shadow-white/10 hover:scale-105 cursor-pointer"
+                onClick={() => window.open(certification.link, '_blank')}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-all duration-300 flex-shrink-0">
+                      {React.createElement(certification.icon, { className: "w-6 h-6 text-orange-400" })}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2 text-white">{certification.title}</h3>
+                      <p className="text-gray-400 mb-1">{certification.issuer}</p>
+                      <p className="text-sm text-orange-400">{certification.date}</p>
+                      <p className="text-sm text-gray-500 mt-2 italic">Click to view certificate</p>
                     </div>
                   </div>
-                </DialogContent>
-              </Dialog>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
